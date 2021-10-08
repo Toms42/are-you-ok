@@ -1,5 +1,28 @@
+/* Are You Ok?
+ * Tom Scherlis 2021
+ *
+ * Are you ok is a satirical mental health support kiosk developed
+ * for the course Electronic Logics && Creative Practice at 
+ * Carnegie Mellon University. This software was written in Processing
+ * and is intended to run on a raspberry pi.
+ *
+ * requirements: the command 'espeak' should be installed on the system.
+ *
+ * pin mappings are below. LEDs should be active high, and buttons should
+ * be active low.
+ *
+ * If running on hardware, set hardware = true, otherwise the system will
+ * not initialize gpios and will run in a windowed mode using keyboard
+ * y/n inputs.
+ *
+ * Reminders: Disable screen blanking if you intend to run this kiosk for
+ * more than a couple minutes at a time.
+ * 
+ */
+
 import processing.io.*;
 
+// Pin mappings:
 int noLED = 27;
 int yesLED = 22;
 int noButton = 4;
@@ -101,11 +124,11 @@ void setup() {
           new Prompt("Do you think your anxiety is due to an\nimpending climate disaster?",
             new Prompt("Try taking pleasure in the little things\nand avoid thinking about the future.\nGreen energy companies such as Exxonmobil™\nhave their best scientists on it!", null, null),
             new Prompt("Do you think your anxiety is due to an\nongoing global pandemic?",
-              new Prompt("Remember that many people lost loved ones,\ncareers, and much more. Instead of complaining, be\ngrateful that you are in such a good position\nyourself.", null, null),
+              new Prompt("Remember that many people lost loved ones,\ncareers, and much more. Instead of\ncomplaining, be grateful that you are in such\na good position yourself.", null, null),
               new Prompt("Are you worried about your future?",
                 new Prompt("Are you struggling to find a job?", 
                   new Prompt("Did you decide to enter a field without\na stable job market?",
-                    new Prompt("Consider attending an MBA program\nsuch as Carnegie Mellon's Tepper School of Business!", null, null),
+                    new Prompt("Consider attending an MBA program\nsuch as Carnegie Mellon's Tepper School of Business™!", null, null),
                     new Prompt("Consider contacting the Career and Professional\nDevelopment Center for help updating your résumé!", null, null)
                     ),
                   new Prompt("Are you struggling to find a job that you like?",
