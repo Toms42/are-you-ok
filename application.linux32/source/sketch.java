@@ -115,7 +115,7 @@ public void setup() {
                 new Prompt("I'm sorry for your loss.", null, null),
                 new Prompt("Are you sure you are depressed?",
                   new Prompt("A negative attitude does not help.\nYou're really bringing down the vibe.",
-                    new Prompt("Have you considered that many people\nhave it worse than you?\nSome people have legitimate mental illness.",
+                    new Prompt("Have you considered that many people\nhave it worse than you?",
                       new Prompt("Hmm.. Consider reaching out to\nCounseling and Psychological Services (CAPS)™\nor an online therapy resource such as TalkSpace™.\nWith Talkspace™’s Guaranteed Response Time™, you’ll\nknow when to expect your daily response from\nyour counselor, allowing you to get the most\nout of your counseling.", null, null), 
                       new Prompt("That's awfully selfish of you.", null, null)
                       ),
